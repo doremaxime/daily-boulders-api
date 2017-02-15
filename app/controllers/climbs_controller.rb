@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# :nodoc:
 class ClimbsController < ApplicationController
   before_action :set_climb, only: [:show, :update, :destroy]
 
@@ -45,11 +48,11 @@ class ClimbsController < ApplicationController
   def set_climb
     @climb = Climb.find(params[:id])
   end
-  private set_climb
+  private :set_climb
 
   # Only allow a trusted parameter "white list" through.
   def climb_params
     params.require(:climb).permit(:date, :grade)
   end
-  private climb_params
+  private :climb_params
 end
