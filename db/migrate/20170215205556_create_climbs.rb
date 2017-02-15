@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 class CreateClimbs < ActiveRecord::Migration[5.0]
   def change
     create_table :climbs do |t|
-      t.date :date
-      t.integer :grade
+      t.date :date, null: false
+      t.integer :grade, null: false
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
