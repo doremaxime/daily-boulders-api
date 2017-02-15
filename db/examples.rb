@@ -18,12 +18,10 @@
 #                password_confirmation: nil)
 # end
 
-# Climb.transactions do
-  %w(V2 V8 V9 V4).each do |climb|
-    # date = '2017-02-10'
-    # grade = climb
-    next if Climb.exists? grade: climb
-    Climb.create!(date: '2017-02-10',
-                  grade: climb)
-  end
-# end
+%w(V2 V8 V9 V4).each do |climb|
+  # date = '2017-02-10'
+  # grade = climb
+  next if Climb.exists? grade: climb
+  Climb.create!(date: '2017-02-10',
+                grade: climb)
+end
