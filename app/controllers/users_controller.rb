@@ -45,6 +45,8 @@ class UsersController < ProtectedController
   end
 
   def index
+    @users = User.all
+
     render json: User.all
   end
 
