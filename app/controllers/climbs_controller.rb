@@ -28,6 +28,7 @@ class ClimbsController < ApplicationController
   def update
     if @climb.update(climb_params)
       render json: @climb
+      head :no_content
     else
       render json: @climb.errors, status: :unprocessable_entity
     end
@@ -36,6 +37,8 @@ class ClimbsController < ApplicationController
   # DELETE /climbs/1
   def destroy
     @climb.destroy
+
+    head :no_content
   end
 
   # Use callbacks to share common setup or constraints between actions.
