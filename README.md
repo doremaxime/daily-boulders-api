@@ -7,6 +7,11 @@ Daily Boulders is a SPA which allows users to create/view/update/delete their da
 ## User Stories
 
 As a user, when signed in, I want to:
+-  be able to sign up and know if my logins worked or not. Only other option on view is sign in.
+-  be able to sign in and know if my logins worked or not. Only other option on view is sign up.
+-  be able to change my password and sign out when signed in.
+-  change my password and know if it worked or not, when signed in.
+-  be able to sign out and be brought back to the 'sign up/in' view.
 -  be able to create/log a day for my grade(s).
 -  be able to read/see my entries.
 -  be able to update my entries.
@@ -16,6 +21,6 @@ As a user, when signed in, I want to:
 
 ## Technology used
 
--  Ruby, Ruby on Rails, SQL, Handlebars
+-  Ruby, Ruby on Rails, SQL
 -  Macbook Air
 -  Google Chrome, Atom, Heroku, GitHub
