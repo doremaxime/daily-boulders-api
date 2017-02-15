@@ -18,12 +18,12 @@
 #                password_confirmation: nil)
 # end
 
-Climbs.transactions do
-  %w(max alex dale dan).each do |climb|
-    name = climb
-    grade = 5
-    next if Climb.exists? name: name, grade: grade
-    Climb.create!(name: name,
-                  grade: grade)
+# Climb.transactions do
+  %w(V2 V8 V9 V4).each do |climb|
+    # date = '2017-02-10'
+    # grade = climb
+    next if Climb.exists? grade: climb
+    Climb.create!(date: '2017-02-10',
+                  grade: climb)
   end
-end
+# end
