@@ -17,3 +17,13 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+Climbs.transactions do
+  %w(max alex dale dan).each do |climb|
+    name = climb
+    grade = 5
+    next if Climb.exists? name: name, grade: grade
+    Climb.create!(name: name,
+                  grade: grade)
+  end
+end
