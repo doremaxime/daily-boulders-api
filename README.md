@@ -2,8 +2,20 @@
 
 # About
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Daily Boulders is a SPA which allows users to create/view/update/delete their daily climbing grades.
 
-## About
+## User Stories
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+As a user, when signed in, I want to:
+-  be able to create/log a day for my grade(s).
+-  be able to read/see my entries.
+-  be able to update my entries.
+-  be able to delete my entries.
+-  be able to use all site actions without refreshing the page.
+-  be able to use the site without any bugs.
+
+## Technology used
+
+-  Ruby, Ruby on Rails, SQL, Handlebars
+-  Macbook Air
+-  Google Chrome, Atom, Heroku, GitHub
