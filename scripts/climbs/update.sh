@@ -8,8 +8,8 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --data '{
     "climb": {
-      "date": "'"${NAME}"'",
-      "grade": "'"${UNIT}"'"
+      "date": "'"${DATE}"'",
+      "grade": "'"${GRADE}"'"
       }
     }'
      # \
