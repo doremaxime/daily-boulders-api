@@ -9,7 +9,7 @@ curl "${API}${URL_PATH}" \
   --data '{
     "climb": {
       "date": "'"${DATE}"'",
-      "grade": "'"${GRADE}"'",
+      "grade": "'"${GRADE}"'"
       }
     }' # \
   # --header "Authorization: Token token=$TOKEN"
