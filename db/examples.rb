@@ -10,18 +10,23 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# %w(antony jeff matt jason).each do |name|
-#   email = "#{name}@#{name}.com"
-#   next if User.exists? email: email
-#   User.create!(email: email,
-#                password: 'abc123',
-#                password_confirmation: nil)
+%w(antony jeff matt jason).each do |name|
+  email = "#{name}@#{name}.com"
+  next if User.exists? email: email
+  User.create!(email: email,
+               password: 'abc123',
+               password_confirmation: nil)
+end
+
+# %w(V2 V8 V9 V4).each do |climb|
+#   user = User.first
+#   next if Climb.exists? grade: climb
+#   user.climbs.build(date: '2017-02-10',
+#                     grade: climb,
+#                     user_id: user)
 # end
 
-%w(V2 V8 V9 V4).each do |climb|
-  # date = '2017-02-10'
-  # grade = climb
-  next if Climb.exists? grade: climb
-  Climb.create!(date: '2017-02-10',
-                grade: climb)
-end
+Climb.create!(date: '2010-01-01', grade: 'V1', user_id: 1)
+Climb.create!(date: '2019-09-09', grade: 'V9', user_id: 2)
+Climb.create!(date: '2017-02-10', grade: 'V0', user_id: 3)
+Climb.create!(date: '2018-08-08', grade: 'V8', user_id: 4)

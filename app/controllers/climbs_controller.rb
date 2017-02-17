@@ -27,6 +27,19 @@ class ClimbsController < ApplicationController
     end
   end
 
+# --
+#   def create
+#     @example = current_user.examples.build(example_params)
+#
+#     if @example.save
+#       render json: @example, status: :created
+#     else
+#       render json: @example.errors, status: :unprocessable_entity
+#     end
+#   end
+# --
+
+
   # PATCH/PUT /climbs/1
   def update
     if @climb.update(climb_params)
