@@ -18,7 +18,7 @@ class ClimbsController < ApplicationController
 
   # POST /climbs
   def create
-    @climb = Climb.new(climb_params)
+    @climb = current_user.climbs.new(climb_params)
 
     if @climb.save
       render json: @climb, status: :created
@@ -27,18 +27,15 @@ class ClimbsController < ApplicationController
     end
   end
 
-# --
 #   def create
-#     @example = current_user.examples.build(example_params)
+#     @climb = current_user.climbs.build(climb_params)
 #
-#     if @example.save
-#       render json: @example, status: :created
+#     if @climb.save
+#       render json: @climb, status: :created
 #     else
-#       render json: @example.errors, status: :unprocessable_entity
+#       render json: @climb.errors, status: :unprocessable_entity
 #     end
 #   end
-# --
-
 
   # PATCH/PUT /climbs/1
   def update
@@ -65,7 +62,7 @@ class ClimbsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def climb_params
-    params.require(:climb).permit(:date, :grade)
+    params.require(:climb).permit(:date, :grade, :id, :user_id)
   end
   private :climb_params
 end
