@@ -6,7 +6,8 @@ class ClimbsController < ProtectedController
 
   # GET /climbs
   def index
-    @climbs = current_user.climbs.all
+    # @climbs = current_user.climbs.all
+    @climbs = current_user.climbs.all.order(date: :desc)
 
     render json: @climbs
   end
