@@ -34,7 +34,7 @@ As a user, when signed in, I want to:
 7. Tested the authorization and the CRUD together to make sure that the climbs were owned by their users on front end.
 8. Ordered Index action by date
 9. Finalized README.
-10. 9. Deployed.
+10. Deployed.
 
 
 ## With more time I would...
