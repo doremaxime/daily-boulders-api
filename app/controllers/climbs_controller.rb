@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 # :nodoc:
-class ClimbsController < ApplicationController
+class ClimbsController < ProtectedController
   before_action :set_climb, only: [:show, :update, :destroy]
 
   # GET /climbs
   def index
-    @climbs = Climb.all
+    # @climbs = current_user.climbs.all
+    @climbs = current_user.climbs.all.order(date: :desc)
 
     render json: @climbs
   end
@@ -18,7 +19,7 @@ class ClimbsController < ApplicationController
 
   # POST /climbs
   def create
-    @climb = Climb.new(climb_params)
+    @climb = current_user.climbs.build(climb_params)
 
     if @climb.save
       render json: @climb, status: :created
@@ -46,13 +47,13 @@ class ClimbsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_climb
-    @climb = Climb.find(params[:id])
+    @climb = current_user.climbs.find(params[:id])
   end
   private :set_climb
 
   # Only allow a trusted parameter "white list" through.
   def climb_params
-    params.require(:climb).permit(:date, :grade)
+    params.require(:climb).permit(:date, :grade, :id)
   end
   private :climb_params
 end

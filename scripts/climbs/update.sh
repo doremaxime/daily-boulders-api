@@ -11,8 +11,7 @@ curl "${API}${URL_PATH}" \
       "date": "'"${DATE}"'",
       "grade": "'"${GRADE}"'"
       }
-    }'
-     # \
-  # --header "Authorization: Token token=$TOKEN"
+    }' \
+  --header "Authorization: Token token=$TOKEN"
 
 echo
